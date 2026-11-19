@@ -1,0 +1,14 @@
+test_main_calls_optimized_function (test_profiler_optimized.TestProfilerOptimized.test_main_calls_optimized_function) ... ok
+test_memory_intensive_function (test_profiler_optimized.TestProfilerOptimized.test_memory_intensive_function) ... ok
+test_optimized_fast_function (test_profiler_optimized.TestProfilerOptimized.test_optimized_fast_function) ... ok
+test_slow_function (test_profiler_optimized.TestProfilerOptimized.test_slow_function) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 6.246s
+
+OK
+memory_intensive_function: result=333333283333335000000, duration=4.033154 s
+RSS before=26.727 MiB, after=26.730 MiB, delta=0.004 MiB
+Handout's 5 s timing target met: True (observation; depends on instrumentation and machine load)
+optimized_fast_function: result=328350, duration=0.000005900 s
+slow_function: result=333283335000, duration=2.002784 s

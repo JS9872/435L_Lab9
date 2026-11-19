@@ -1,0 +1,14 @@
+test_fast_function (test_profiler.TestProfiler.test_fast_function) ... ok
+test_main_calls_all_functions (test_profiler.TestProfiler.test_main_calls_all_functions) ... ok
+test_memory_intensive_function (test_profiler.TestProfiler.test_memory_intensive_function) ... ok
+test_slow_function (test_profiler.TestProfiler.test_slow_function) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 34.009s
+
+OK
+fast_function: result=328350, duration=0.000291900 s
+memory_intensive_function: result=333333283333335000000, duration=31.573288 s
+RSS before=33.211 MiB, after=33.254 MiB, delta=0.043 MiB
+Handout's 5 s timing target met: False (observation; depends on instrumentation and machine load)
+slow_function: result=333283335000, duration=2.153274 s

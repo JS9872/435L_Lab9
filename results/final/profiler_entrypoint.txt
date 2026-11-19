@@ -1,0 +1,2 @@
+C:\Main\School\CSE FALL 4\EECE 435L\Labs\Lab9\Code\.venv\Lib\site-packages\coverage\inorout.py:560: CoverageWarning: Module profiler_optimized was never imported. (module-not-imported); see https://coverage.readthedocs.io/en/7.17.3/messages.html#warning-module-not-imported
+  self.warn(f"Module {pkg} was never imported.", slug="module-not-imported")

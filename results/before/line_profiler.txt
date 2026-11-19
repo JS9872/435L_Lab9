@@ -1,0 +1,39 @@
+Timer unit: 1e-07 s
+
+Total time: 2.15785 s
+File: C:\Main\School\CSE FALL 4\EECE 435L\Labs\Lab9\Code\profiler.py
+Function: slow_function at line 6
+
+Line #      Hits         Time  Per Hit   % Time  Line Contents
+==============================================================
+     6                                           def slow_function():
+     7         1   20169084.0 2.02e+07     93.5      time.sleep(2)
+     8         1         63.0     63.0      0.0      total = 0
+     9     10001     461557.0     46.2      2.1      for i in range(10000):
+    10     10000     947725.0     94.8      4.4          total += i ** 2
+    11         1         86.0     86.0      0.0      return total
+
+Total time: 0.0005481 s
+File: C:\Main\School\CSE FALL 4\EECE 435L\Labs\Lab9\Code\profiler.py
+Function: fast_function at line 14
+
+Line #      Hits         Time  Per Hit   % Time  Line Contents
+==============================================================
+    14                                           def fast_function():
+    15         1         35.0     35.0      0.6      total = 0
+    16       101       2939.0     29.1     53.6      for i in range(100):
+    17       100       2429.0     24.3     44.3          total += i ** 2
+    18         1         78.0     78.0      1.4      return total
+
+Total time: 45.9397 s
+File: C:\Main\School\CSE FALL 4\EECE 435L\Labs\Lab9\Code\profiler.py
+Function: memory_intensive_function at line 21
+
+Line #      Hits         Time  Per Hit   % Time  Line Contents
+==============================================================
+    21                                           def memory_intensive_function():
+    22         1         29.0     29.0      0.0      total = 0
+    23  10000001  201838462.0     20.2     43.9      for i in range(10000000):
+    24  10000000  257558459.0     25.8     56.1          total += i ** 2
+    25         1         66.0     66.0      0.0      return total
+

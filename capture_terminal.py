@@ -45,7 +45,7 @@ def child(spec_path):
     font.FaceName = "Consolas"
     kernel.SetCurrentConsoleFontEx(kernel.GetStdHandle(-11), False, ctypes.byref(font))
     rows = 8 + sum(max(1, math.ceil(len(line) / 103)) for line in spec["text"].splitlines())
-    user.MoveWindow(hwnd, 30, 30, 1560, min(1400, rows * 27 + 65), True)
+    user.MoveWindow(hwnd, 30, 30, 1560, min(1550, rows * 34 + 90), True)
     user.SetForegroundWindow(hwnd)
     # Use a real console, clear it, and show exact saved output without image synthesis.
     subprocess.run(["cmd", "/c", "cls"])

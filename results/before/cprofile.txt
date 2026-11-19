@@ -1,0 +1,15 @@
+         8 function calls in 10.501 seconds
+
+   Ordered by: internal time
+
+   ncalls  tottime  percall  cumtime  percall filename:lineno(function)
+        1    8.478    8.478    8.478    8.478 profiler.py:21(memory_intensive_function)
+        1    2.013    2.013    2.013    2.013 {built-in method time.sleep}
+        1    0.010    0.010    2.023    2.023 profiler.py:6(slow_function)
+        1    0.000    0.000    0.000    0.000 {method 'disable' of '_lsprof.Profiler' objects}
+        1    0.000    0.000    0.000    0.000 profiler.py:14(fast_function)
+        1    0.000    0.000   10.501   10.501 profiler.py:28(main)
+        1    0.000    0.000   10.501   10.501 {built-in method builtins.exec}
+        1    0.000    0.000   10.501   10.501 profiler.py:1(<module>)
+
+

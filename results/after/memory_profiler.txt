@@ -1,0 +1,28 @@
+Filename: profiler_memoryprofiler_optimized.py
+
+Line #    Mem usage    Increment  Occurrences   Line Contents
+=============================================================
+     6     26.2 MiB     26.2 MiB           1   @profile
+     7                                         def slow_function():
+     8     26.2 MiB      0.0 MiB           1       return profiler_optimized.slow_function()
+
+
+Filename: profiler_memoryprofiler_optimized.py
+
+Line #    Mem usage    Increment  Occurrences   Line Contents
+=============================================================
+    11     26.2 MiB     26.2 MiB           1   @profile
+    12                                         def optimized_fast_function():
+    13     26.2 MiB      0.0 MiB           1       return profiler_optimized.optimized_fast_function()
+
+
+Filename: profiler_memoryprofiler_optimized.py
+
+Line #    Mem usage    Increment  Occurrences   Line Contents
+=============================================================
+    16     26.2 MiB     26.2 MiB           1   @profile
+    17                                         def memory_intensive_function():
+    18     26.2 MiB     -0.0 MiB           1       return profiler_optimized.memory_intensive_function()
+
+
+Sampled RSS: start=25.898 MiB, peak=26.219 MiB, end=26.164 MiB, peak-start=0.320 MiB; samples=2967, interval=0.01 s

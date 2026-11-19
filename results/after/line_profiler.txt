@@ -1,0 +1,38 @@
+Timer unit: 1e-07 s
+
+Total time: 2.02175 s
+File: C:\Main\School\CSE FALL 4\EECE 435L\Labs\Lab9\Code\profiler.py
+Function: slow_function at line 6
+
+Line #      Hits         Time  Per Hit   % Time  Line Contents
+==============================================================
+     6                                           def slow_function():
+     7         1   20004118.0    2e+07     98.9      time.sleep(2)
+     8         1        696.0    696.0      0.0      total = 0
+     9     10001      92427.0      9.2      0.5      for i in range(10000):
+    10     10000     120227.0     12.0      0.6          total += i ** 2
+    11         1         55.0     55.0      0.0      return total
+
+Total time: 7.2e-06 s
+File: C:\Main\School\CSE FALL 4\EECE 435L\Labs\Lab9\Code\profiler_optimized.py
+Function: optimized_fast_function at line 6
+
+Line #      Hits         Time  Per Hit   % Time  Line Contents
+==============================================================
+     6                                           def optimized_fast_function():
+     7                                               """Sum squares for range(100) in constant time using the exact identity."""
+     8         1         17.0     17.0     23.6      n = 100
+     9         1         55.0     55.0     76.4      return n * (n - 1) * (2 * n - 1) // 6
+
+Total time: 30.7943 s
+File: C:\Main\School\CSE FALL 4\EECE 435L\Labs\Lab9\Code\profiler.py
+Function: memory_intensive_function at line 21
+
+Line #      Hits         Time  Per Hit   % Time  Line Contents
+==============================================================
+    21                                           def memory_intensive_function():
+    22         1         16.0     16.0      0.0      total = 0
+    23  10000001  137893124.0     13.8     44.8      for i in range(10000000):
+    24  10000000  170050285.0     17.0     55.2          total += i ** 2
+    25         1         61.0     61.0      0.0      return total
+

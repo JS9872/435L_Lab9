@@ -1,0 +1,93 @@
+[
+  {
+    "phase": "before",
+    "kind": "cprofile",
+    "page": 1,
+    "path": "screenshots\\before_cprofile_1.png",
+    "command": "-m cProfile -s time profiler.py"
+  },
+  {
+    "phase": "before",
+    "kind": "line_profiler",
+    "page": 1,
+    "path": "screenshots\\before_line_profiler_1.png",
+    "command": "profiler_lineprofiler.py"
+  },
+  {
+    "phase": "before",
+    "kind": "line_profiler",
+    "page": 2,
+    "path": "screenshots\\before_line_profiler_2.png",
+    "command": "profiler_lineprofiler.py"
+  },
+  {
+    "phase": "before",
+    "kind": "memory_profiler",
+    "page": 1,
+    "path": "screenshots\\before_memory_profiler_1.png",
+    "command": "-m memory_profiler profiler_memoryprofiler.py"
+  },
+  {
+    "phase": "before",
+    "kind": "tests",
+    "page": 1,
+    "path": "screenshots\\before_tests_1.png",
+    "command": "-m unittest -v test_profiler"
+  },
+  {
+    "phase": "before",
+    "kind": "coverage",
+    "page": 1,
+    "path": "screenshots\\before_coverage_1.png",
+    "command": "-m coverage report -m"
+  },
+  {
+    "phase": "after",
+    "kind": "cprofile",
+    "page": 1,
+    "path": "screenshots\\after_cprofile_1.png",
+    "command": "-m cProfile -s time profiler_optimized.py"
+  },
+  {
+    "phase": "after",
+    "kind": "line_profiler",
+    "page": 1,
+    "path": "screenshots\\after_line_profiler_1.png",
+    "command": "profiler_lineprofiler_optimized.py"
+  },
+  {
+    "phase": "after",
+    "kind": "line_profiler",
+    "page": 2,
+    "path": "screenshots\\after_line_profiler_2.png",
+    "command": "profiler_lineprofiler_optimized.py"
+  },
+  {
+    "phase": "after",
+    "kind": "memory_profiler",
+    "page": 1,
+    "path": "screenshots\\after_memory_profiler_1.png",
+    "command": "-m memory_profiler profiler_memoryprofiler_optimized.py"
+  },
+  {
+    "phase": "after",
+    "kind": "tests",
+    "page": 1,
+    "path": "screenshots\\after_tests_1.png",
+    "command": "-m unittest -v test_profiler_optimized"
+  },
+  {
+    "phase": "after",
+    "kind": "coverage",
+    "page": 1,
+    "path": "screenshots\\after_coverage_1.png",
+    "command": "-m coverage report -m"
+  },
+  {
+    "phase": "final",
+    "kind": "coverage",
+    "page": 1,
+    "path": "screenshots\\final_coverage_1.png",
+    "command": "-m coverage report -m"
+  }
+]
