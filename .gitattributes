@@ -5,3 +5,4 @@
 *.png binary
 *.docx binary
 *.prof binary
+results/** whitespace=-blank-at-eof
