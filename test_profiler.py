@@ -1,6 +1,7 @@
 """Correctness, timing, memory observations, and orchestration before optimization."""
 
 import time
+import sys
 import unittest
 from unittest.mock import patch
 
@@ -33,7 +34,10 @@ class TestProfiler(unittest.TestCase):
         print(f"memory_intensive_function: result={result}, duration={duration:.6f} s")
         print(f"RSS before={before:.3f} MiB, after={after:.3f} MiB, delta={after-before:.3f} MiB")
         self.assertEqual(result, 333333283333335000000)
-        self.assertLess(duration, 5)
+        if sys.gettrace() is None:
+            self.assertLess(duration, 5)
+        else:
+            print("5 s performance budget checked only without coverage tracing")
         # A scalar accumulator does not guarantee a positive retained-RSS delta.
         self.assertGreater(before, 0)
         self.assertGreater(after, 0)

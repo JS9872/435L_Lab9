@@ -1,11 +1,25 @@
-"""Memory profile the original functions at their actual source lines."""
+"""Profile full workloads at call boundaries and sample RSS every 10 ms.
 
-from memory_profiler import profile
+Thin decorated wrappers avoid millions of slow Windows RSS queries inside loops.
+The sampled peak also detects transient changes that before/after readings miss.
+"""
+
+from memory_profiler import memory_usage, profile
 import profiler
 
-slow_function = profile(profiler.slow_function)
-fast_function = profile(profiler.fast_function)
-memory_intensive_function = profile(profiler.memory_intensive_function)
+@profile
+def slow_function():
+    return profiler.slow_function()
+
+
+@profile
+def fast_function():
+    return profiler.fast_function()
+
+
+@profile
+def memory_intensive_function():
+    return profiler.memory_intensive_function()
 
 
 def main():
@@ -15,4 +29,8 @@ def main():
 
 
 if __name__ == "__main__":
-    main()
+    samples = memory_usage((main, (), {}), interval=0.01)
+    print(f"Sampled RSS: start={samples[0]:.3f} MiB, "
+          f"peak={max(samples):.3f} MiB, end={samples[-1]:.3f} MiB, "
+          f"peak-start={max(samples)-samples[0]:.3f} MiB; "
+          f"samples={len(samples)}, interval=0.01 s")
